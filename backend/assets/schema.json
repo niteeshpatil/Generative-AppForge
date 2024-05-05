@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": ["homePage", "loginPage", "resetPage"]
+    },
+    "body": {
+      "type": "object",
+      "properties": {
+        "appBar": {
+          "type": "object",
+          "properties": {
+            "display": { "type": "boolean" },
+            "title": { "type": "string" },
+            "color": { "type": "string", "format": "color" }
+          },
+          "required": ["display"]
+        },
+        "alignment": { "type": "string" },
+        "padding": { "type": "integer" },
+        "elements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "string", "enum": ["text", "button"] },
+              "label": { "type": "string" },
+              "placeholder": { "type": "string" },
+              "placeholderColor": { "type": "string", "format": "color" },
+              "isPassword": { "type": "boolean" },
+              "color": { "type": "string", "format": "color" }
+            },
+            "required": ["type", "label"]
+          }
+        }
+      },
+      "required": ["appBar", "alignment", "padding", "elements"]
+    }
+  },
+  "required": ["type", "body"]
+}

@@ -1,0 +1,30 @@
+{
+  "type": "loginPage",
+  "body": {
+    "appBar": {
+      "display": false
+    },
+    "alignment": "center",
+    "padding": 16,
+    "elements": [
+      {
+        "type": "text",
+        "label": "Username",
+        "placeholder": "Enter your username",
+        "placeholderColor": "#CCCCCC"
+      },
+      {
+        "type": "text",
+        "label": "Password",
+        "placeholder": "Enter your password",
+        "placeholderColor": "#CCCCCC",
+        "isPassword": true
+      },
+      {
+        "type": "button",
+        "label": "Login",
+        "color": "#2196F3"
+      }
+    ]
+  }
+}

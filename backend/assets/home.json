@@ -1,0 +1,25 @@
+{
+  "type": "homePage",
+  "body": {
+    "appBar": {
+      "display": true,
+      "title": "Home",
+      "color": "#2196F3"
+    },
+    "alignment": "center",
+    "padding": 16,
+    "elements": [
+      {
+        "type": "text",
+        "label": "Welcome",
+        "placeholder": "Enter your name",
+        "placeholderColor": "#CCCCCC"
+      },
+      {
+        "type": "button",
+        "label": "Continue",
+        "color": "#2196F3"
+      }
+    ]
+  }
+}

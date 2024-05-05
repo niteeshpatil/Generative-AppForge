@@ -1,0 +1,23 @@
+{
+  "type": "resetPage",
+  "body": {
+    "appBar": {
+      "display": false
+    },
+    "alignment": "center",
+    "padding": 16,
+    "elements": [
+      {
+        "type": "text",
+        "label": "Email",
+        "placeholder": "Enter your email",
+        "placeholderColor": "#CCCCCC"
+      },
+      {
+        "type": "button",
+        "label": "Reset Password",
+        "color": "#2196F3"
+      }
+    ]
+  }
+}

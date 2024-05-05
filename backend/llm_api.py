@@ -2,6 +2,7 @@ import os
 import json
 import google.generativeai as genai
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 with open('config.json') as f:
     config = json.load(f)
@@ -12,6 +13,7 @@ model = genai.GenerativeModel('gemini-pro')
 
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/generate', methods=['POST', 'GET'])
 def generate():

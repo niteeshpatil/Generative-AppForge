@@ -17,6 +17,10 @@
         "type": "button",
         "label": "Reset Password",
         "color": "#2196F3"
+      },
+      {
+        "type": "image",
+        "url": "https://pic.onlinewebfonts.com/thumbnails/icons_501613.svg"
       }
     ]
   }

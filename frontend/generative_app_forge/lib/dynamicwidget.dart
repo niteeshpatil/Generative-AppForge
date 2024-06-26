@@ -38,6 +38,7 @@ class _CombinedWidgetsScreenState extends State<CombinedWidgetsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(46, 2, 0, 0),
       appBar: AppBar(
         title: Text('Generative Widgets'),
       ),
@@ -52,6 +53,7 @@ class _CombinedWidgetsScreenState extends State<CombinedWidgetsScreen> {
                   width: MediaQuery.of(context).size.width * 0.2,
                   height: MediaQuery.of(context).size.width * 0.4,
                   decoration: BoxDecoration(
+                    color: Colors.white,
                     border: Border.all(color: Colors.black),
                   ),
                   child: pageData.isNotEmpty
@@ -62,50 +64,54 @@ class _CombinedWidgetsScreenState extends State<CombinedWidgetsScreen> {
             ),
           ),
           Expanded(
-            child: SingleChildScrollView(
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    TextField(
-                      controller: _textEditingController,
-                      decoration: InputDecoration(
-                        labelText: 'Text',
-                        border: OutlineInputBorder(),
+            child: Container(
+              color: Colors.white,
+              child: SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      TextField(
+                        controller: _textEditingController,
+                        decoration: InputDecoration(
+                          fillColor: Color.fromARGB(131, 54, 105, 244),
+                          labelText: 'Text',
+                          border: OutlineInputBorder(),
+                        ),
+                        minLines: 3, // Increase the height of the text field
+                        maxLines: 5,
                       ),
-                      minLines: 3, // Increase the height of the text field
-                      maxLines: 5,
-                    ),
-                    SizedBox(height: 10),
-                    Checkbox(
-                      value: _sendPageData,
-                      onChanged: (bool? value) {
-                        setState(() {
-                          _sendPageData = value!;
-                        });
-                      },
-                    ),
-                    Text('context'),
-                    SizedBox(height: 10),
-                    Row(
-                      // Add this
-                      mainAxisAlignment:
-                          MainAxisAlignment.spaceEvenly, // Add this
-                      children: <Widget>[
-                        ElevatedButton(
-                          onPressed: _toggleListening,
-                          child: Text(_isListening
-                              ? 'Stop Listening'
-                              : 'Start Listening'),
-                        ),
-                        ElevatedButton(
-                          onPressed: () => _handleSubmit(context),
-                          child: Text('Submit'),
-                        ),
-                      ],
-                    ),
-                  ],
+                      SizedBox(height: 10),
+                      Checkbox(
+                        value: _sendPageData,
+                        onChanged: (bool? value) {
+                          setState(() {
+                            _sendPageData = value!;
+                          });
+                        },
+                      ),
+                      Text('context'),
+                      SizedBox(height: 10),
+                      Row(
+                        // Add this
+                        mainAxisAlignment:
+                            MainAxisAlignment.spaceEvenly, // Add this
+                        children: <Widget>[
+                          ElevatedButton(
+                            onPressed: _toggleListening,
+                            child: Text(_isListening
+                                ? 'Stop Listening'
+                                : 'Start Listening'),
+                          ),
+                          ElevatedButton(
+                            onPressed: () => _handleSubmit(context),
+                            child: Text('Submit'),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

@@ -14,4 +14,14 @@ frontend development.
  - Python
  - AI/large language model (LLM) Model
  - Training data
+
+ #Screen Shots -
+ - login page development Flow
+    ![Screenshot (19)](https://github.com/niteeshpatil/Generative-AppForge/assets/88622611/894443b7-a0bc-4e76-818c-fa0a7b688c2a)
+    ![Screenshot (20)](https://github.com/niteeshpatil/Generative-AppForge/assets/88622611/d69abb29-a6e0-40d3-83ce-b36ba90fa318)
+    ![Screenshot (18)](https://github.com/niteeshpatil/Generative-AppForge/assets/88622611/eb2a3160-5720-4990-9b9d-6163767dfecf)
+    
+
+   
+
  
